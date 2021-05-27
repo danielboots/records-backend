@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsitems",
+  "info": {
+    "name": "newsitems",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "writeup": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "newsitem_id": {
+      "type": "uid",
+      "targetField": "headline"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

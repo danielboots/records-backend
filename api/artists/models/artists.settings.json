@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "name": "Artists",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "artist_id": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "Gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "spotifyembed": {
+      "type": "string"
+    },
+    "applemusic": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "House",
+        "Pop",
+        "EDM"
+      ],
+      "default": "House"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "spotifyfollow": {
+      "type": "string"
+    },
+    "youtubeembed": {
+      "type": "string"
+    },
+    "events": {
+      "collection": "events",
+      "via": "artist"
+    },
+    "releases": {
+      "collection": "releases"
+    }
+  }
+}

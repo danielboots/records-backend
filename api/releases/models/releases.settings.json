@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "releases",
+  "info": {
+    "name": "Releases",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trackname": {
+      "type": "string",
+      "required": true
+    },
+    "artist": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "artwork": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "writeup": {
+      "type": "text"
+    },
+    "release": {
+      "type": "date"
+    },
+    "itunes": {
+      "type": "string"
+    },
+    "spotifyembed": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "uid",
+      "targetField": "trackname"
+    },
+    "Genre": {
+      "type": "enumeration",
+      "enum": [
+        "Pop",
+        "Dance",
+        "EDM",
+        "House"
+      ]
+    },
+    "publisher": {
+      "type": "string",
+      "default": "Intimacy Publishing"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "youtubeembed": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "studios",
+  "info": {
+    "name": "Studios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "studio_id": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "hardware": {
+      "type": "text"
+    },
+    "software": {
+      "type": "text"
+    },
+    "instruments": {
+      "type": "text"
+    }
+  }
+}

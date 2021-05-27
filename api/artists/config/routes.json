@@ -2,56 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/events",
-      "handler": "events.find",
+      "path": "/artists",
+      "handler": "artists.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/events/me",
-      "handler": "events.me",
+      "path": "/artists/count",
+      "handler": "artists.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/events/count",
-      "handler": "events.count",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/events/:id",
-      "handler": "events.findOne",
+      "path": "/artists/:id",
+      "handler": "artists.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/events",
-      "handler": "events.create",
+      "path": "/artists",
+      "handler": "artists.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/events/:id",
-      "handler": "events.update",
+      "path": "/artists/:id",
+      "handler": "artists.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/events/:id",
-      "handler": "events.delete",
+      "path": "/artists/:id",
+      "handler": "artists.delete",
       "config": {
         "policies": []
       }

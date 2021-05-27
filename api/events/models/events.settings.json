@@ -9,7 +9,6 @@
     "timestamps": true,
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string"
@@ -45,13 +44,16 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+      "required": false
     },
     "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "events"
+    },
+    "artist": {
+      "via": "events",
+      "model": "artists"
     }
   }
 }
